@@ -23,4 +23,6 @@ public class AuthController {
         AdminLoginResponseDto response = authService.loginAdmin(request);
         return ResponseEntity.ok(response);
     }
+
+    
 }
