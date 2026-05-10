@@ -1,0 +1,50 @@
+@baseUrl = http://localhost:8080/api/v1
+@token = paste-token-here
+
+### Register
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Sheena",
+  "lastName": "Jaquez",
+  "email": "sheena@example.com",
+  "password": "Password1",
+  "confirmPassword": "Password1"
+}
+
+### Verify email
+GET {{baseUrl}}/auth/verify-email?token=paste-verification-token-here
+
+### Login
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "sheena@example.com",
+  "password": "Password1"
+}
+
+### Dashboard
+GET {{baseUrl}}/dashboard
+Authorization: Bearer {{token}}
+
+### Add medication
+POST {{baseUrl}}/medications
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "medicineName": "Hydroxychloroquine",
+  "brandName": "Plaquenil",
+  "dosage": "200mg",
+  "purpose": "SLE",
+  "quantity": 20,
+  "price": 45.50,
+  "purchaseDate": "2026-03-15",
+  "notes": "Take after meals"
+}
+
+### Medications
+GET {{baseUrl}}/medications?period=all&sort=date_desc
+Authorization: Bearer {{token}}
