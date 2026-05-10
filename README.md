@@ -31,7 +31,7 @@ A vertical-slice full-stack MVP based on the Medify SDD.
 ```txt
 medify-webapp/
 ├── backend/                  # Spring Boot API
-│   └── src/main/java/com/medify/
+│   └── src/main/java/com/edu/cit/jaquez/medify/
 │       ├── auth/              # auth vertical slice
 │       ├── dashboard/         # dashboard vertical slice
 │       ├── medication/        # medication vertical slice
@@ -39,7 +39,7 @@ medify-webapp/
 │       ├── security/          # JWT/security config
 │       ├── user/              # user model/repo/shared DTO
 │       └── common/            # API wrapper + errors
-├── frontend/                 # ReactJS + Tailwind web app
+├── web/                 # ReactJS + Tailwind web app
 │   └── src/features/
 │       ├── auth/
 │       ├── dashboard/
